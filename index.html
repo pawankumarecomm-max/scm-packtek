@@ -825,6 +825,109 @@
       .tracking-input-wrap { flex-direction: column; }
       .tracking-grid { grid-template-columns: 1fr; }
     }
+  
+
+    /* BGSG Global Working + CSV Client Upgrade */
+    .service-card.photo-service { padding: 0; overflow: hidden; }
+    .service-photo { height: 182px; position: relative; overflow: hidden; background: #140909; }
+    .service-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+    .photo-service:hover .service-photo img { transform: scale(1.06); }
+    .service-photo::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.48)); }
+    .photo-service .service-body { padding: 24px; }
+    .photo-badge { position:absolute; left:16px; bottom:16px; z-index:2; display:inline-flex; align-items:center; gap:8px; padding:8px 11px; border-radius:999px; background:rgba(255,255,255,.92); color:#6b1010; font-weight:900; font-size:12px; letter-spacing:.06em; text-transform:uppercase; box-shadow:0 10px 28px rgba(0,0,0,.22); }
+
+    .global-working { position: relative; overflow: hidden; }
+    .global-working::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 20% 10%, rgba(255,45,32,.13), transparent 34%), radial-gradient(circle at 82% 45%, rgba(255,138,61,.11), transparent 34%); pointer-events:none; }
+    .global-command { position: relative; display:grid; grid-template-columns: .92fr 1.08fr; gap:28px; align-items:stretch; margin-top:32px; }
+    .global-story-card, .global-map-pro, .freight-photo-card { border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.075); border-radius:34px; box-shadow:var(--shadow); overflow:hidden; }
+    .global-story-card { padding:30px; display:flex; flex-direction:column; justify-content:space-between; }
+    .global-story-card h3 { margin:0 0 12px; color:#fff; font-size:34px; line-height:1.03; letter-spacing:-.05em; }
+    .global-story-card p { margin:0; color:#d8c1c1; }
+    .global-stat-row { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; margin-top:24px; }
+    .global-stat { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:16px; }
+    .global-stat strong { display:block; color:#fff; font-size:30px; line-height:1; letter-spacing:-.05em; }
+    .global-stat span { display:block; margin-top:7px; color:#d8c1c1; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.09em; }
+    .lane-stack { display:grid; gap:12px; margin-top:24px; }
+    .lane-item { display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; padding:14px; border-radius:18px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); }
+    .lane-icon { width:42px; height:42px; border-radius:14px; display:grid; place-items:center; background:#ff2d20; color:#fff; font-size:20px; box-shadow:0 12px 28px rgba(255,45,32,.18); }
+    .lane-item strong { display:block; color:#fff; }
+    .lane-item span { display:block; color:#d8c1c1; font-size:13px; }
+
+    .global-map-pro { padding:22px; position:relative; background:#080404; }
+    .global-map-head { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; margin-bottom:12px; }
+    .global-map-head strong { display:block; color:#fff; font-size:20px; letter-spacing:-.03em; }
+    .global-map-head span { color:#d8c1c1; font-size:13px; }
+    .map-legend { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .legend-pill { display:inline-flex; align-items:center; gap:7px; padding:8px 10px; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.11); color:#f8eaea; font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; }
+    .legend-dot { width:8px; height:8px; border-radius:99px; background:#ff2d20; box-shadow:0 0 12px rgba(255,45,32,.7); }
+    .legend-dot.air { background:#ffb13d; box-shadow:0 0 12px rgba(255,177,61,.7); }
+    .global-svg-wrap { border-radius:26px; background: radial-gradient(circle at 65% 45%, rgba(255,45,32,.14), transparent 30%), linear-gradient(180deg, #100707, #050303); border:1px solid rgba(255,255,255,.1); overflow:hidden; }
+    .global-svg-wrap svg { width:100%; height:auto; display:block; }
+    .map-land { fill:rgba(255,255,255,.12); stroke:rgba(255,255,255,.12); stroke-width:2; }
+    .map-grid-line { stroke:rgba(255,255,255,.055); stroke-width:1; }
+    .ocean-route { fill:none; stroke:#ff2d20; stroke-width:3.2; stroke-linecap:round; stroke-dasharray:7 10; filter:drop-shadow(0 0 7px rgba(255,45,32,.52)); }
+    .air-route { fill:none; stroke:#ffb13d; stroke-width:2.6; stroke-linecap:round; stroke-dasharray:3 8; filter:drop-shadow(0 0 7px rgba(255,177,61,.5)); }
+    .hub-dot { fill:#fff; stroke:#ff2d20; stroke-width:5; }
+    .market-dot { fill:#ff2d20; stroke:#fff; stroke-width:3; }
+    .market-dot.air { fill:#ffb13d; }
+    .map-text { fill:#fff6f6; font-size:14px; font-weight:800; }
+    .map-text.small { font-size:12px; fill:#e8cfcf; }
+    .market-band { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .market-band span { padding:9px 12px; border-radius:999px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.11); color:#f5dddd; font-weight:750; font-size:12px; }
+    .freight-photo-grid { position:relative; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px; margin-top:22px; }
+    .freight-photo-card { min-height:300px; position:relative; }
+    .freight-photo-card img { width:100%; height:300px; object-fit:cover; }
+    .freight-photo-card::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 35%, rgba(0,0,0,.72)); pointer-events:none; }
+    .freight-caption { position:absolute; left:18px; right:18px; bottom:18px; z-index:2; }
+    .freight-caption strong { display:block; color:#fff; font-size:23px; letter-spacing:-.04em; }
+    .freight-caption span { color:#ead6d6; font-size:13px; }
+
+    .client-section { background:#fff8f8; color:#221414; }
+    .client-summary { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; margin-top:26px; }
+    .client-summary-card { background:#fff; border:1px solid rgba(143,0,0,.12); border-radius:24px; padding:22px; box-shadow:0 18px 46px rgba(33,9,9,.08); }
+    .client-summary-card strong { display:block; color:#180909; font-size:42px; line-height:1; letter-spacing:-.06em; }
+    .client-summary-card span { display:block; margin-top:8px; color:#8f0000; text-transform:uppercase; letter-spacing:.1em; font-weight:900; font-size:12px; }
+    .client-logo-grid { display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:14px; margin-top:28px; }
+    .client-logo-card { min-height:198px; background:#fff; border:1px solid rgba(143,0,0,.12); border-radius:26px; padding:24px; box-shadow:0 16px 40px rgba(33,9,9,.075); display:flex; flex-direction:column; justify-content:space-between; transition:.25s ease; }
+    .client-logo-card:hover { transform:translateY(-4px); border-color:rgba(255,45,32,.32); box-shadow:0 22px 58px rgba(143,0,0,.13); }
+    .client-logo-img-wrap { width:100%; height:78px; display:flex; align-items:center; justify-content:center; border-radius:14px; background:#fff; border:none; overflow:hidden; margin-bottom:22px; }
+    .client-logo-img-wrap img { width:100%; height:100%; max-width:none; max-height:none; object-fit:contain; object-position:center center; display:block; }
+    .logo-fallback { width:100%; height:100%; display:none; place-items:center; background:#ff2d20; color:#fff; font-weight:950; letter-spacing:-.05em; font-size:22px; border-radius:14px; }
+    .client-logo-card h3 { margin:0 0 6px; font-size:18px; color:#231111; letter-spacing:-.035em; }
+    .client-logo-card p { margin:0; color:#6b5555; font-weight:800; font-size:13px; }
+    .client-logo-card small { display:none !important; }
+    .client-wall { margin-top:30px; background:#fff; border:1px solid rgba(143,0,0,.12); border-radius:28px; padding:22px; box-shadow:0 18px 48px rgba(33,9,9,.08); }
+    .client-wall-head { display:flex; justify-content:space-between; gap:14px; align-items:flex-start; margin-bottom:18px; }
+    .client-wall-head h3 { margin:0; font-size:24px; letter-spacing:-.04em; }
+    .client-wall-head p { margin:5px 0 0; color:#6b5555; max-width:780px; }
+    .client-chip-grid { display:flex; flex-wrap:wrap; gap:9px; max-height:330px; overflow:auto; padding-right:4px; }
+    .client-chip { display:inline-flex; align-items:center; padding:8px 11px; border-radius:999px; background:#fff8f8; border:1px solid #f0d8d8; color:#352020; font-size:12px; font-weight:800; }
+    .client-chip.global { background:#100707; color:#fff3f3; border-color:#411313; }
+    .client-source-note { margin-top:14px; color:#7f6b6b; font-size:12px; }
+
+    @media (max-width: 1180px) {
+      .client-logo-grid { grid-template-columns:repeat(4, minmax(0,1fr)); }
+    }
+    @media (max-width: 980px) {
+      .global-command, .freight-photo-grid { grid-template-columns:1fr; }
+      .client-logo-grid { grid-template-columns:repeat(3, minmax(0,1fr)); }
+      .client-summary { grid-template-columns:1fr; }
+    }
+    @media (max-width: 640px) {
+      .client-logo-grid { grid-template-columns:repeat(2, minmax(0,1fr)); }
+      .global-stat-row { grid-template-columns:1fr; }
+      .global-story-card, .global-map-pro { border-radius:24px; padding:20px; }
+      .freight-photo-card img { height:240px; }
+      .client-wall-head { display:block; }
+    }
+
+  
+    .section-head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;}
+    .section-head-copy{max-width:820px;}
+    .section-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid rgba(7,21,38,.14);background:#fff;color:#334155;font-weight:800;font-size:14px;box-shadow:0 12px 26px rgba(17,34,56,.06);}
+    .service-card.photo-service h3{margin-top:0;}
+    .service-body p{margin:0;color:#5d6d80;}
+
   </style>
 </head>
 <body>
@@ -837,6 +940,8 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#technology">Technology</a>
+        <a href="#global-reach">Global</a>
+        <a href="#clients">Clients</a>
         <a href="#network">Network</a>
         <a href="#industries">Industries</a>
         <a href="#tracking">Track Shipment</a>
@@ -1003,37 +1108,63 @@
 
     <section class="section" id="services">
       <div class="container">
-        <div class="reveal">
-          <span class="eyebrow" style="background:#fff1f0;color:#6b1010;border-color:#f3c6c3"><span class="dot"></span> Our Services</span>
-          <h2 class="section-title">A wider logistics offering presented in a sharper BGSG way.</h2>
-          <p class="section-copy light-copy">This service stack positions BGSG as an integrated supply-chain partner covering domestic movement, freight coordination, warehousing, documentation and execution control.</p>
+        <div class="section-head-row reveal">
+          <div class="section-head-copy">
+            <span class="eyebrow" style="background:#fff1f0;color:#6b1010;border-color:#f3c6c3"><span class="dot"></span> Our Services</span>
+            <h2 class="section-title" style="margin-bottom:10px">End-to-end logistics and trade solutions designed for your supply chain.</h2>
+            <p class="section-copy light-copy">Reliable freight execution across road, air and ocean, with warehousing, documentation and control-tower visibility in one operating workflow.</p>
+          </div>
+          <a class="section-cta" href="#quote">Explore All Services →</a>
         </div>
         <div class="grid three" style="margin-top:30px">
-          <article class="card service-card reveal">
-            <div class="icon">🚚</div><h3>Surface Transportation</h3><p>Reliable road transport for plant dispatch, industrial movement, route-based loads and customer deliveries.</p>
-            <ul class="service-list"><li>FTL and PTL support</li><li>Factory pickup planning</li><li>Dedicated delivery coordination</li></ul>
+          <article class="card service-card photo-service reveal">
+            <div class="service-photo">
+              <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80" alt="Surface transport truck" loading="lazy">
+              <span class="photo-badge">🚚 Surface Transport</span>
+            </div>
+            <div class="service-body"><h3>Surface Transportation</h3><p>Reliable road transport for plant dispatch, industrial movement, route-based loads and customer deliveries.</p>
+            <ul class="service-list"><li>FTL and PTL support</li><li>Factory pickup planning</li><li>Dedicated delivery coordination</li></ul></div>
           </article>
-          <article class="card service-card reveal">
-            <div class="icon">✈️</div><h3>Air Freight Coordination</h3><p>For urgent shipments where speed matters, with support on movement planning and document flow.</p>
-            <ul class="service-list"><li>Airport-linked cargo handling</li><li>Priority shipment planning</li><li>Time-sensitive movement support</li></ul>
+          <article class="card service-card photo-service reveal">
+            <div class="service-photo">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aircraft%20cargo%20%28ULD%29%20loader%20in%20operaton.jpg?width=1200" alt="Air freight cargo loading into aircraft" loading="lazy">
+              <span class="photo-badge">✈ Air Freight</span>
+            </div>
+            <div class="service-body"><h3>Air Freight Coordination</h3><p>For urgent cargo where speed matters, with airport-linked planning, pickup coordination and shipment document follow-up.</p>
+            <ul class="service-list"><li>Priority cargo movement</li><li>Airport-linked handling support</li><li>Time-sensitive dispatch coordination</li></ul></div>
           </article>
-          <article class="card service-card reveal">
-            <div class="icon">🚢</div><h3>Sea Freight Support</h3><p>Import-export movement support with commercial document follow-up and ocean-linked cargo coordination.</p>
-            <ul class="service-list"><li>Port-oriented shipment support</li><li>Sea import / export assistance</li><li>Shipment planning visibility</li></ul>
+          <article class="card service-card photo-service reveal">
+            <div class="service-photo">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Container%20Ship.jpg?width=1200" alt="Ocean freight container ship at port" loading="lazy">
+              <span class="photo-badge">🚢 Ocean Freight</span>
+            </div>
+            <div class="service-body"><h3>Ocean Freight Support</h3><p>Import-export movement support with BL, container, port-side follow-up and international shipment coordination.</p>
+            <ul class="service-list"><li>Sea import / export assistance</li><li>Port-oriented shipment support</li><li>BL and shipping document flow</li></ul></div>
           </article>
-          <article class="card service-card reveal">
-            <div class="icon">🏬</div><h3>Warehousing & Distribution</h3><p>Storage, staging and distribution support to create smoother dispatches and stronger regional coverage.</p>
-            <ul class="service-list"><li>Warehouse coordination</li><li>Inventory movement support</li><li>Dispatch scheduling</li></ul>
+          <article class="card service-card photo-service reveal">
+            <div class="service-photo">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" alt="Warehousing and distribution" loading="lazy">
+              <span class="photo-badge">🏬 Warehousing</span>
+            </div>
+            <div class="service-body"><h3>Warehousing &amp; Distribution</h3><p>Storage, staging and distribution support to create smoother dispatches and stronger regional coverage.</p>
+            <ul class="service-list"><li>Secure warehousing &amp; storage</li><li>Staging &amp; order fulfillment</li><li>Pan-India distribution support</li></ul></div>
           </article>
-          <article class="card service-card reveal">
-            <div class="icon">📄</div><h3>Documentation & Trade Support</h3><p>Coordinate invoice, packing list, AWB / BL and other shipment documents in one operational flow.</p>
-            <ul class="service-list"><li>Commercial documentation follow-up</li><li>Import-export support</li><li>Compliance-friendly workflow</li></ul>
+          <article class="card service-card photo-service reveal">
+            <div class="service-photo">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Documentation and trade support" loading="lazy">
+              <span class="photo-badge">📄 Documentation</span>
+            </div>
+            <div class="service-body"><h3>Documentation &amp; Trade Support</h3><p>Coordinate invoice, packing list, AWB / BL and other shipment documents in one operational flow.</p>
+            <ul class="service-list"><li>Invoice &amp; packing list coordination</li><li>AWB / BL documentation support</li><li>Compliance &amp; trade guidance</li></ul></div>
           </article>
-          <article class="card service-card reveal">
-            <div class="icon">📊</div><h3>Control Tower Visibility</h3><p>One digital workflow for enquiry, shipment creation, movement updates, documentation and delivery status.</p>
-            <ul class="service-list"><li>Track and trace style visibility</li><li>Document status visibility</li><li>Delivery update view</li></ul>
+          <article class="card service-card photo-service reveal">
+            <div class="service-photo">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Control tower visibility dashboard" loading="lazy">
+              <span class="photo-badge">📊 Control Tower</span>
+            </div>
+            <div class="service-body"><h3>Control Tower Visibility</h3><p>One digital workflow for enquiry, shipment creation, movement updates, documentation and delivery status.</p>
+            <ul class="service-list"><li>Real-time shipment visibility</li><li>Proactive exception management</li><li>End-to-end status updates</li></ul></div>
           </article>
-
         </div>
       </div>
     </section>
@@ -1082,73 +1213,287 @@
       </div>
     </section>
 
-        <section class="section dark" id="global-reach">
+        <section class="section dark global-working" id="global-reach">
       <div class="container">
         <div class="reveal">
-          <span class="eyebrow"><span class="dot"></span> Global Reach</span>
-          <h2 class="section-title">Strong service presence across major international trade markets.</h2>
-          <p class="section-copy">BGSG positions itself as a strong supply-chain partner for India and key global corridors including the UK, USA, Canada, UAE / Dubai, Nigeria, Kenya, South Africa, China, Thailand, Sri Lanka and other major countries.</p>
+          <span class="eyebrow"><span class="dot"></span> Global Working Network</span>
+          <h2 class="section-title">India control desk with domestic and global freight execution.</h2>
+          <p class="section-copy">BGSG is shown as a route-first logistics partner: strong India domestic movement, air freight coordination for urgent shipments, ocean freight support for import-export cargo, and global trade handling across key markets.</p>
         </div>
-        <div class="global-wrap">
-          <div class="global-card reveal">
-            <h3 style="font-size:30px;line-height:1.08;margin:0 0 10px;letter-spacing:-.04em;color:white">India-first, globally connected logistics support.</h3>
-            <p style="margin:0;color:#d8c1c1">From domestic dispatch strength to global cargo coordination, BGSG is built to support businesses that want dependable movement, responsive communication and broad service coverage across major markets.</p>
-            <div class="market-pills">
-              <span class="market-pill">India</span>
-              <span class="market-pill">United Kingdom</span>
-              <span class="market-pill">USA</span>
-              <span class="market-pill">Canada</span>
-              <span class="market-pill">Dubai / UAE</span>
-              <span class="market-pill">Nigeria</span>
-              <span class="market-pill">Kenya</span>
-              <span class="market-pill">South Africa</span>
-              <span class="market-pill">China</span>
-              <span class="market-pill">Thailand</span>
-              <span class="market-pill">Sri Lanka</span>
-              <span class="market-pill">And other major countries</span>
+
+        <div class="global-command">
+          <div class="global-story-card reveal">
+            <div>
+              <h3>From Indian factory gates to global trade lanes.</h3>
+              <p>Use this section to show investors and customers that BGSG is not only a local transporter. The website now communicates domestic execution, international coordination, freight photos, trade corridors and client proof in one place.</p>
+              <div class="global-stat-row">
+                <div class="global-stat"><strong>20K+</strong><span>Domestic shipments delivered</span></div>
+                <div class="global-stat"><strong>4.5K+</strong><span>Global shipments managed</span></div>
+                <div class="global-stat"><strong>165</strong><span>India domestic client records</span></div>
+                <div class="global-stat"><strong>13</strong><span>Global trade client records</span></div>
+              </div>
             </div>
-            <p class="global-note">Our service map highlights the type of markets BGSG aims to cover through road transport, freight coordination, warehousing support and international shipment execution.</p>
+            <div class="lane-stack">
+              <div class="lane-item"><span class="lane-icon">🇮🇳</span><div><strong>India Domestic Network</strong><span>Factory pickup, NCR/Haryana dispatch, route-wise FTL/PTL and delivery coordination.</span></div></div>
+              <div class="lane-item"><span class="lane-icon">✈</span><div><strong>Air Freight Working</strong><span>Urgent cargo, airport-linked movement, AWB flow and faster customer deliveries.</span></div></div>
+              <div class="lane-item"><span class="lane-icon">🚢</span><div><strong>Ocean Freight Working</strong><span>Container-linked import/export support with BL, shipping bill, BOE and port follow-up.</span></div></div>
+            </div>
           </div>
-          <div class="world-map-box reveal">
-            <div class="map-title">
-              <span>Global logistics service map</span>
-              <span class="map-sub">Major markets highlighted</span>
+
+          <div class="global-map-pro reveal">
+            <div class="global-map-head">
+              <div><strong>Service map: India hub to major trade markets</strong><span>Better visual map with air and ocean lanes highlighted separately.</span></div>
+              <div class="map-legend"><span class="legend-pill"><i class="legend-dot"></i> Ocean / Trade</span><span class="legend-pill"><i class="legend-dot air"></i> Air / Priority</span></div>
             </div>
-            <div class="world-map" aria-label="Global service map showing key markets">
-              <svg viewBox="0 0 1000 460" role="img">
-                <path class="continent" d="M85 125C112 74 190 64 248 104C272 120 292 150 288 174C282 211 252 223 228 250C199 283 165 300 126 278C94 260 83 230 60 206C36 181 55 151 85 125Z"/>
-                <path class="continent" d="M255 256C281 263 304 287 303 318C301 355 290 389 270 420C257 439 231 432 224 407C215 378 226 350 228 323C230 296 229 270 255 256Z"/>
-                <path class="continent" d="M430 120C458 103 493 104 516 123C533 137 531 159 507 166C478 175 443 174 425 156C413 144 418 129 430 120Z"/>
-                <path class="continent" d="M478 176C515 178 556 205 563 247C570 289 551 343 520 381C501 404 470 393 460 362C447 324 447 290 443 256C439 222 448 188 478 176Z"/>
-                <path class="continent" d="M520 129C568 96 632 92 708 109C774 124 842 144 888 186C916 211 923 258 890 277C857 297 808 287 775 300C736 315 704 345 654 337C615 331 591 305 567 277C543 249 519 225 515 195C512 171 503 145 520 129Z"/>
-                <path class="continent" d="M803 339C831 327 870 330 893 350C910 365 909 390 892 404C865 426 823 424 792 405C773 394 773 366 803 339Z"/>
-                <path class="route-glow" d="M690 218 C640 190, 600 175, 558 164"/>
-                <path class="route-glow" d="M690 218 C598 150, 470 138, 438 138"/>
-                <path class="route-glow" d="M690 218 C785 170, 818 152, 842 146"/>
-                <path class="route-glow" d="M690 218 C760 196, 820 220, 856 266"/>
-                <path class="route-glow" d="M690 218 C570 185, 470 196, 470 228"/>
-                <path class="route-glow" d="M690 218 C615 235, 564 245, 520 286"/>
-                <circle class="service-dot" cx="690" cy="218" r="8"/><text class="map-label" x="702" y="210">India</text>
-                <circle class="service-dot" cx="438" cy="138" r="7"/><text class="map-label" x="450" y="130">UK</text>
-                <circle class="service-dot" cx="168" cy="130" r="7"/><text class="map-label" x="180" y="122">Canada</text>
-                <circle class="service-dot" cx="145" cy="166" r="7"/><text class="map-label" x="157" y="160">USA</text>
-                <circle class="service-dot" cx="558" cy="164" r="7"/><text class="map-label" x="570" y="156">Dubai</text>
-                <circle class="service-dot" cx="470" cy="228" r="7"/><text class="map-label" x="432" y="222">Nigeria</text>
-                <circle class="service-dot" cx="520" cy="286" r="7"/><text class="map-label" x="532" y="280">Kenya</text>
-                <circle class="service-dot" cx="520" cy="354" r="7"/><text class="map-label" x="532" y="348">South Africa</text>
-                <circle class="service-dot" cx="842" cy="146" r="7"/><text class="map-label" x="854" y="140">China</text>
-                <circle class="service-dot" cx="786" cy="232" r="7"/><text class="map-label" x="798" y="226">Thailand</text>
-                <circle class="service-dot" cx="712" cy="258" r="7"/><text class="map-label" x="724" y="252">Sri Lanka</text>
+            <div class="global-svg-wrap" aria-label="Global map showing India as logistics hub with routes to UK, USA, Canada, Dubai, Africa and Asia">
+              <svg viewBox="0 0 1000 520" role="img">
+                <line class="map-grid-line" x1="0" y1="130" x2="1000" y2="130"/><line class="map-grid-line" x1="0" y1="260" x2="1000" y2="260"/><line class="map-grid-line" x1="0" y1="390" x2="1000" y2="390"/>
+                <line class="map-grid-line" x1="200" y1="0" x2="200" y2="520"/><line class="map-grid-line" x1="400" y1="0" x2="400" y2="520"/><line class="map-grid-line" x1="600" y1="0" x2="600" y2="520"/><line class="map-grid-line" x1="800" y1="0" x2="800" y2="520"/>
+                <path class="map-land" d="M74 160C117 94 206 86 271 125C312 150 314 213 273 245C226 283 217 330 163 330C104 330 82 286 46 249C16 217 36 187 74 160Z"/>
+                <path class="map-land" d="M236 328C278 336 311 366 305 414C299 461 266 499 237 487C212 477 214 432 219 394C224 365 213 339 236 328Z"/>
+                <path class="map-land" d="M440 120C494 72 573 90 622 129C661 160 651 217 604 232C565 244 523 230 477 250C439 267 395 236 398 189C400 159 414 143 440 120Z"/>
+                <path class="map-land" d="M500 252C542 246 585 264 603 305C622 350 596 416 552 426C508 436 478 397 469 354C459 309 468 263 500 252Z"/>
+                <path class="map-land" d="M602 168C684 99 831 116 912 180C971 226 938 300 855 318C797 331 756 295 712 304C655 316 598 279 578 235C568 211 580 187 602 168Z"/>
+                <path class="map-land" d="M822 344C872 339 916 361 933 403C950 449 912 478 865 470C823 463 796 429 803 389C806 369 810 354 822 344Z"/>
+
+                <path class="ocean-route" d="M650 258 C585 248 545 231 512 204"/>
+                <path class="air-route" d="M650 258 C560 153 438 123 320 186"/>
+                <path class="air-route" d="M650 258 C541 112 339 86 232 151"/>
+                <path class="ocean-route" d="M650 258 C625 233 617 219 606 216"/>
+                <path class="ocean-route" d="M650 258 C592 260 548 270 508 286"/>
+                <path class="ocean-route" d="M650 258 C607 302 570 341 540 390"/>
+                <path class="air-route" d="M650 258 C693 218 739 196 790 193"/>
+                <path class="ocean-route" d="M650 258 C690 258 716 270 742 288"/>
+                <path class="ocean-route" d="M650 258 C650 271 654 286 662 300"/>
+
+                <circle class="hub-dot" cx="650" cy="258" r="10"/><text class="map-text" x="666" y="263">India Hub</text><text class="map-text small" x="666" y="280">NCR / Haryana control</text>
+                <circle class="market-dot air" cx="512" cy="204" r="7"/><text class="map-text" x="464" y="195">UK</text>
+                <circle class="market-dot air" cx="320" cy="186" r="7"/><text class="map-text" x="286" y="174">USA</text>
+                <circle class="market-dot air" cx="232" cy="151" r="7"/><text class="map-text" x="198" y="137">Canada</text>
+                <circle class="market-dot" cx="606" cy="216" r="7"/><text class="map-text" x="616" y="209">Dubai / UAE</text>
+                <circle class="market-dot" cx="508" cy="286" r="7"/><text class="map-text" x="450" y="280">Nigeria</text>
+                <circle class="market-dot" cx="574" cy="323" r="7"/><text class="map-text" x="586" y="322">Kenya</text>
+                <circle class="market-dot" cx="540" cy="390" r="7"/><text class="map-text" x="554" y="390">South Africa</text>
+                <circle class="market-dot air" cx="790" cy="193" r="7"/><text class="map-text" x="802" y="190">China</text>
+                <circle class="market-dot" cx="742" cy="288" r="7"/><text class="map-text" x="754" y="289">Thailand</text>
+                <circle class="market-dot" cx="662" cy="300" r="7"/><text class="map-text" x="675" y="305">Sri Lanka</text>
               </svg>
             </div>
-            <div class="map-mini-stats">
-              <div class="mini"><strong>20K+</strong><span>Domestic shipments delivered</span></div>
-              <div class="mini"><strong>4.5K+</strong><span>Global shipments managed</span></div>
-              <div class="mini"><strong>11+</strong><span>Key countries highlighted</span></div>
+            <div class="market-band">
+              <span>India</span><span>UK</span><span>USA</span><span>Canada</span><span>Dubai / UAE</span><span>Nigeria</span><span>Kenya</span><span>South Africa</span><span>China</span><span>Thailand</span><span>Sri Lanka</span><span>Major countries on request</span>
             </div>
           </div>
         </div>
+
+        <div class="freight-photo-grid">
+          <article class="freight-photo-card reveal">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Container%20Ship.jpg?width=1200" alt="Container ship for ocean freight" loading="lazy">
+            <div class="freight-caption"><strong>Ocean Freight</strong><span>Container, BL, port-side shipment and import-export coordination.</span></div>
+          </article>
+          <article class="freight-photo-card reveal">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aircraft%20cargo%20%28ULD%29%20loader%20in%20operaton.jpg?width=1200" alt="Air cargo loading into aircraft" loading="lazy">
+            <div class="freight-caption"><strong>Air Freight</strong><span>Airport-linked cargo movement for urgent and high-priority shipments.</span></div>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="section client-section" id="clients">
+      <div class="container">
+        <div class="section-head-row reveal">
+          <div class="section-head-copy">
+            <span class="eyebrow" style="background:#fff1f0;color:#6b1010;border-color:#f3c6c3"><span class="dot"></span> Our Clients</span>
+            <h2 class="section-title" style="margin-bottom:10px">Trusted by leading brands across industries.</h2>
+            <p class="section-copy light-copy">From retail and FMCG to fashion, logistics tech and D2C brands — BGSG partners with companies that demand reliable execution, clean documentation and dependable delivery.</p>
+          </div>
+          <a class="section-cta" href="#quote">Work With Us →</a>
+        </div>
+        
+
+        <div class="client-logo-grid">
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/relianceretail.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Reliance Retail logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">RR</span>
+              </div>
+              <div>
+                <h3>Reliance Retail</h3>
+                <p>Retail &amp; Distribution</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/nykaa.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Nykaa Fashion logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">NF</span>
+              </div>
+              <div>
+                <h3>Nykaa Fashion</h3>
+                <p>Beauty &amp; Fashion</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/shoppersstop.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Shoppers Stop logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">SS</span>
+              </div>
+              <div>
+                <h3>Shoppers Stop</h3>
+                <p>Retail</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/shiprocket.in?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Shiprocket logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">S</span>
+              </div>
+              <div>
+                <h3>Shiprocket</h3>
+                <p>Logistics Tech</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/barista.co.in?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Barista Coffee logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">BC</span>
+              </div>
+              <div>
+                <h3>Barista Coffee</h3>
+                <p>F&amp;B Retail</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/clarks.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Clarks logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">C</span>
+              </div>
+              <div>
+                <h3>Clarks</h3>
+                <p>Footwear</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/dotandkey.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Dot &amp; Key logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">DK</span>
+              </div>
+              <div>
+                <h3>Dot &amp; Key</h3>
+                <p>Personal Care</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/honasa.in?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Honasa Consumer logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">HC</span>
+              </div>
+              <div>
+                <h3>Honasa Consumer</h3>
+                <p>Consumer Brands</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/happilo.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Happilo logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">H</span>
+              </div>
+              <div>
+                <h3>Happilo</h3>
+                <p>FMCG</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/portronics.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Portronics logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">P</span>
+              </div>
+              <div>
+                <h3>Portronics</h3>
+                <p>Electronics</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/unibicfoods.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="UNIBIC logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">U</span>
+              </div>
+              <div>
+                <h3>UNIBIC</h3>
+                <p>Food</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/veromoda.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Vero Moda logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">VM</span>
+              </div>
+              <div>
+                <h3>Vero Moda</h3>
+                <p>Fashion</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/snitch.co.in?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="SNITCH logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">S</span>
+              </div>
+              <div>
+                <h3>SNITCH</h3>
+                <p>Fashion</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/wareiq.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="WareIQ logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">W</span>
+              </div>
+              <div>
+                <h3>WareIQ</h3>
+                <p>Logistics</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/eatclub.in?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="EatClub logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">E</span>
+              </div>
+              <div>
+                <h3>EatClub</h3>
+                <p>Food Brands</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/schandgroup.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="S Chand logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">SC</span>
+              </div>
+              <div>
+                <h3>S Chand</h3>
+                <p>Publishing</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/bigbasket.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="BigBasket logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">B</span>
+              </div>
+              <div>
+                <h3>BigBasket</h3>
+                <p>Grocery Retail</p>
+              </div>
+            </article>
+            <article class="client-logo-card reveal">
+              <div class="client-logo-img-wrap">
+                <img src="https://img.logo.dev/zivame.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=200&format=png" alt="Zivame logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <span class="logo-fallback" aria-hidden="true">Z</span>
+              </div>
+              <div>
+                <h3>Zivame</h3>
+                <p>D2C Retail</p>
+              </div>
+            </article>
+        </div>
+
+              </div>
     </section>
 
     <section class="section" id="network">
@@ -1237,7 +1582,7 @@
               <div class="field"><label for="delivery">Delivery Location *</label><input id="delivery" name="delivery" placeholder="City / consignee address" required></div>
               <div class="field"><label for="material">Material Type</label><input id="material" name="material" placeholder="Cartons, machinery, FMCG, etc."></div>
               <div class="field"><label for="weight">Weight / Volume</label><input id="weight" name="weight" placeholder="Example: 8 tons / 500 boxes"></div>
-              <div class="field"><label for="service">Service Required *</label><select id="service" name="service" required><option value="">Select service</option><option>Road Transport</option><option>Trade Services</option><option>Warehousing Support</option><option>Full Supply Chain Support</option><option>Documentation Support</option></select></div>
+              <div class="field"><label for="service">Service Required *</label><select id="service" name="service" required><option value="">Select service</option><option>Road Transport</option><option>Air Freight</option><option>Ocean Freight</option><option>Trade Services</option><option>Warehousing Support</option><option>Full Supply Chain Support</option><option>Documentation Support</option></select></div>
               <div class="field"><label for="timeline">Required Timeline</label><input id="timeline" name="timeline" placeholder="Today / This week / Date"></div>
               <div class="field span-2"><label for="message">Additional Details</label><textarea id="message" name="message" placeholder="Vehicle type, invoice value, special handling, route details..."></textarea></div>
             </div>
